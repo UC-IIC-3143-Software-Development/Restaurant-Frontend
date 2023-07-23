@@ -20,6 +20,12 @@ module.exports = {
 		},
 	},
 	plugins: ["react", "react-hooks", "@typescript-eslint", "perfectionist"],
+	ignorePatterns: [
+		".eslintrc.js",
+		"**/react-app-env.d.ts",
+		"**/reportWebVitals.ts",
+		"setupTests.ts",
+	],
 	rules: {
 		// These rules are enabled by default, but we don't want
 		"some-annoying-rule": "off", // (conflicts with XYZ preference)

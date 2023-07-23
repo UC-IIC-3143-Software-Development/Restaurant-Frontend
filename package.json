@@ -22,7 +22,8 @@
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
 		"format": "npx prettier \"**/*\" --ignore-unknown --write",
-		"lint": "eslint . .*js --max-warnings 0 --report-unused-disable-directives"
+		"lint": "eslint . .*js --max-warnings 0 --report-unused-disable-directives",
+		"lint-fix": "eslint . .*js --max-warnings 0 --report-unused-disable-directives --fix"
 	},
 	"eslintConfig": {
 		"extends": [

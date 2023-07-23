@@ -1,4 +1,3 @@
-
 # Checklist
 
 This is the checklist for a new project
@@ -13,4 +12,3 @@ This is the checklist for a new project
 - [ ] Style App with Material Design
 - [ ] Show Loading and Error States
 - [ ] Add Restaurants
- 

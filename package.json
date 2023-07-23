@@ -20,6 +20,7 @@
 		"start": "react-scripts start",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
+		"cypress": "cypress open",
 		"eject": "react-scripts eject",
 		"format": "npx prettier \"**/*\" --ignore-unknown --write",
 		"lint": "eslint . .*js --max-warnings 0 --report-unused-disable-directives",
@@ -46,6 +47,7 @@
 	"devDependencies": {
 		"@typescript-eslint/eslint-plugin": "^6.1.0",
 		"@typescript-eslint/parser": "^6.1.0",
+		"cypress": "^12.17.2",
 		"eslint": "^8.45.0",
 		"eslint-plugin-perfectionist": "^1.5.0",
 		"eslint-plugin-react": "^7.33.0",

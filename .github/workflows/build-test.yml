@@ -5,13 +5,12 @@ name: Frontend CI
 
 on:
   push:
-    branches: [ "main", "devel" ]
+    branches: ["main", "devel"]
   pull_request:
-    branches: [ "main", "devel" ]
+    branches: ["main", "devel"]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
     timeout-minutes: 10 # Change this along with the project evolution
 
@@ -21,39 +20,48 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "npm"
 
-    - name: Install dependencies
-      run: npm ci
+      - name: Install dependencies
+        run: npm ci
 
-    - name: Build
-      run: npm run build
+      - name: Build
+        run: npm run build
 
-    - name: Test
-      run: npm run test
+      - name: Test
+        run: npm run test
 
-    - name: Cypress Run
-      uses: cypress-io/github-action@v5
-      with:
-        start: npm start
-        wait-on: 'http://localhost:3000'
-        build: npm run build
+      # At the moment I'm going to ignore coverage
+      # - name: Test with Jest and generate coverage
+      #   run: |
+      #     npm run test:coverage
+      #     if [[ $? -ne 0 ]]; then
+      #        echo "Coverage threshold not met"
+      #        exit 1
+      #     fi
 
-    - name: Archive Cypress screenshots artifacts
-      uses: actions/upload-artifact@v3
-      if: failure() # Only run this step if previous step failed
-      with:
-        name: cypress-screenshots
-        path: cypress/screenshots/
+      - name: Cypress Run
+        uses: cypress-io/github-action@v5
+        with:
+          start: npm start
+          wait-on: "http://localhost:3000"
+          build: npm run build
 
-    - name: Archive Cypress video artifacts
-      uses: actions/upload-artifact@v3
-      if: failure()
-      with:
-        name: cypress-videos
-        path: cypress/videos
+      - name: Archive Cypress screenshots artifacts
+        uses: actions/upload-artifact@v3
+        if: failure() # Only run this step if previous step failed
+        with:
+          name: cypress-screenshots
+          path: cypress/screenshots/
+
+      - name: Archive Cypress video artifacts
+        uses: actions/upload-artifact@v3
+        if: failure()
+        with:
+          name: cypress-videos
+          path: cypress/videos

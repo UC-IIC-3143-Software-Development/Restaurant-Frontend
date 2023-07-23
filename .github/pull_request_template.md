@@ -9,7 +9,6 @@ Try this checklist before creating a PR.
 
 _Delete this checklist in the actual PR_
 
-
 ## Purpose
 
 _Describe the problem or feature in addition to a link to the related issues._

@@ -23,6 +23,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:coverage": "react-scripts test --coverage",
     "cypress": "cypress open",
     "eject": "react-scripts eject",
     "format": "npx prettier \"**/*\" --ignore-unknown --write",
@@ -67,5 +68,15 @@
     ],
     "*.js": "npm run lint",
     "*.ts": "npm run lint"
+  },
+  "jest": {
+    "coverageThreshold": {
+      "global": {
+        "branches": 70,
+        "functions": 70,
+        "lines": 70,
+        "statements": 70
+      }
+    }
   }
 }

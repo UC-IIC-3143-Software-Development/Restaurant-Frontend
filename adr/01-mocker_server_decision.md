@@ -2,7 +2,7 @@
 
 For test an integration we are going to use some mock server tools, such as, MSW, mirage or Nock.
 
-At the moment I don't have some preference and I need to think about the differences between all.
+I'm going to use Mirage.
 
 # Title
 

@@ -1,15 +1,18 @@
-# Decision record template by Michael Nygard
+# Mock Server Decision
 
-This is the template in [Documenting architecture decisions - Michael Nygard](http://thinkrelevance.com/blog/2011/11/15/documenting-architecture-decisions).
-You can use [adr-tools](https://github.com/npryce/adr-tools) for managing the ADR files.
+For test an integration we are going to use some mock server tools, such as, MSW, mirage or Nock.
 
-In each ADR file, write these sections:
+At the moment I don't have some preference and I need to think about the differences between all.
 
 # Title
 
 ## Status
 
 What is the status, such as proposed, accepted, rejected, deprecated, superseded, etc.?
+
+For more info see this resources:
+
+- https://miragejs.com/docs/comparison-with-other-tools/
 
 ## Context
 

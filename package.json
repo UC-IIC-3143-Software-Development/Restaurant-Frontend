@@ -24,13 +24,14 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "test:coverage": "react-scripts test --coverage",
-    "cypress": "cypress open",
+    "cy": "cypress open",
     "cy:run": "cypress run",
     "eject": "react-scripts eject",
     "format": "npx prettier \"**/*\" --ignore-unknown --write",
-    "lint": "eslint . .*js --max-warnings 0 --report-unused-disable-directives",
-    "lint-fix": "eslint . .*js --max-warnings 0 --report-unused-disable-directives --fix",
-    "prepare": "husky install"
+    "lint": "eslint src/ --max-warnings 0 --report-unused-disable-directives",
+    "lint:fix": "eslint src/ --max-warnings 0 --report-unused-disable-directives --fix",
+    "prepare": "husky install",
+    "dev:arch": "npx depcruise src --include-only \"^src\" --output-type dot | dot -T svg > architecture.svg"
   },
   "eslintConfig": {
     "extends": [
@@ -56,6 +57,7 @@
     "@typescript-eslint/eslint-plugin": "^6.1.0",
     "@typescript-eslint/parser": "^6.1.0",
     "cypress": "^12.17.2",
+    "dependency-cruiser": "^13.1.1",
     "eslint": "^8.45.0",
     "eslint-plugin-perfectionist": "^1.5.0",
     "eslint-plugin-react": "^7.33.0",

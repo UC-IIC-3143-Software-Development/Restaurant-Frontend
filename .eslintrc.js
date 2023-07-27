@@ -16,6 +16,7 @@ module.exports = {
     "**/reportWebVitals.ts",
     "setupTests.ts",
     "cypress/**",
+    "coverage/**",
   ],
   overrides: [],
   parser: "@typescript-eslint/parser",

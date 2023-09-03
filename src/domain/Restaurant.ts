@@ -11,5 +11,4 @@ const RestaurantSchema = z.object({
     .max(50, "Name must be at most 50 characters"),
 });
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-type Restaurant = z.infer<typeof RestaurantSchema>;
+export type Restaurant = z.infer<typeof RestaurantSchema>;

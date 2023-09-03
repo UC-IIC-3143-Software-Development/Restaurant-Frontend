@@ -31,7 +31,8 @@
     "lint": "eslint src/ --max-warnings 0 --report-unused-disable-directives",
     "lint:fix": "eslint src/ --max-warnings 0 --report-unused-disable-directives --fix",
     "prepare": "husky install",
-    "dev:arch": "npx depcruise src --include-only \"^src\" --output-type dot | dot -T svg > architecture.svg"
+    "dev:arch": "npx depcruise src --include-only \"^src\" --output-type dot | dot -T svg > architecture.svg",
+    "knip": "knip"
   },
   "eslintConfig": {
     "extends": [
@@ -63,6 +64,7 @@
     "eslint-plugin-perfectionist": "^1.5.0",
     "eslint-plugin-react": "^7.33.0",
     "husky": "^8.0.0",
+    "knip": "^2.21.1",
     "lint-staged": "^13.2.3",
     "miragejs": "^0.1.47",
     "prettier": "3.0.0"

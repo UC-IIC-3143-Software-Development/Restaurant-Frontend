@@ -1,25 +1,21 @@
+import Typography from "@mui/material/Typography";
 import React from "react";
 
 import "./App.css";
-import logo from "./logo.svg";
+import RestaurantList from "./components/RestaurantList";
 
 function App() {
+  const restaurants = [
+    { address: "Providencia", id: "0", name: "Almuerzos Tia Norita" },
+    { address: "La Florida", id: "1", name: "El Pollo del 8" },
+  ];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img alt="logo" className="App-logo" src={logo} />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Typography component="h2" data-test="heading" variant="h2">
+        {" "}
+        Restaurants{" "}
+      </Typography>{" "}
+      <RestaurantList restaurants={restaurants} />
     </div>
   );
 }

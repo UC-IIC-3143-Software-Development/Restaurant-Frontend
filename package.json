@@ -35,7 +35,8 @@
     "lint:fix": "eslint src/ --max-warnings 0 --report-unused-disable-directives --fix",
     "prepare": "husky install",
     "dev:arch": "npx depcruise src --include-only \"^src\" --output-type dot | dot -T svg > architecture.svg",
-    "knip": "knip"
+    "knip": "knip",
+    "stub-server": "json-server stub-server/db.json –port 8080"
   },
   "eslintConfig": {
     "extends": [
@@ -67,6 +68,7 @@
     "eslint-plugin-perfectionist": "^1.5.1",
     "eslint-plugin-react": "^7.33.0",
     "husky": "^8.0.0",
+    "json-server": "^0.17.3",
     "knip": "^2.21.1",
     "lint-staged": "^13.2.3",
     "miragejs": "^0.1.47",

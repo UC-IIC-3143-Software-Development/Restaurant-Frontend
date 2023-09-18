@@ -1,0 +1,22 @@
+{
+  "restaurants": [
+    {
+      "id": "0",
+      "address": "myAddress1",
+      "name": "myRestaurant1",
+      "contactEmail": "myRestaurant1@myRestaurant.com"
+    },
+    {
+      "id": "1",
+      "address": "myAddress2",
+      "name": "myRestaurant2",
+      "contactEmail": "myRestaurant2@myRestaurant.com"
+    },
+    {
+      "id": "2",
+      "address": "myAddress3",
+      "name": "myRestaurant3",
+      "contactEmail": "myRestaurant3@myRestaurant.com"
+    }
+  ]
+}

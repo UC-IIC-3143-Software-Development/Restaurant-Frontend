@@ -1,14 +1,19 @@
 import Typography from "@mui/material/Typography";
-import React from "react";
+import axios from "Axios";
+import React, { useEffect, useState } from "react";
 
 import "./App.css";
 import RestaurantList from "./components/RestaurantList";
+import { Restaurant } from "./domain/Restaurant";
 
 function App() {
-  const restaurants = [
-    { address: "Providencia", id: "0", name: "Almuerzos Tia Norita" },
-    { address: "La Florida", id: "1", name: "El Pollo del 8" },
-  ];
+  const [restaurants, setRestaurants] = useState<Restaurant[]>([]);
+  useEffect(() => {
+    axios
+      .get("http://localhost:8080/books")
+      .then((res) => setRestaurants(res.data));
+  }, []);
+
   return (
     <div>
       <Typography component="h2" data-test="heading" variant="h2">

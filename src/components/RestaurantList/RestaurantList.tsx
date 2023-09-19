@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Restaurant } from "../domain/Restaurant";
+import { Restaurant } from "../../domain/Restaurant";
 
 type RestaurantListProps = {
   restaurants: Restaurant[];

@@ -82,6 +82,9 @@
     "*.ts": "npm run lint"
   },
   "jest": {
+    "transformIgnorePatterns": [
+      "/node_modules/(?!(axios)/)"
+    ],
     "coverageThreshold": {
       "global": {
         "branches": 70,

@@ -12,6 +12,7 @@ const RestaurantList: React.FC<RestaurantListProps> = ({ restaurants }) => {
       {restaurants.map((restaurant) => (
         <div className="restaurant-item" key={restaurant.id}>
           <h2 className="name">{restaurant.name}</h2>
+          <a href={`/restaurants/${restaurant.id}`}>View Details</a>
           <p className="address">{restaurant.address}</p>
         </div>
       ))}

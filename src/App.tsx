@@ -1,7 +1,9 @@
 import Typography from "@mui/material/Typography";
 import React from "react";
+import { Route, Routes } from "react-router-dom";
 
 import "./App.css";
+import RestaurantDetailContainer from "./components/RestaurantDetail/RestaurantDetailContainer";
 import RestaurantListContainer from "./components/RestaurantList/RestaurantListContainer";
 
 function App() {
@@ -11,7 +13,13 @@ function App() {
         {" "}
         Restaurants{" "}
       </Typography>{" "}
-      <RestaurantListContainer />
+      <Routes>
+        <Route element={<RestaurantListContainer />} path="/" />
+        <Route
+          element={<RestaurantDetailContainer />}
+          path="/restaurants/:id"
+        />
+      </Routes>
     </div>
   );
 }

@@ -15,7 +15,6 @@ module.exports = {
     "**/react-app-env.d.ts",
     "**/reportWebVitals.ts",
     "setupTests.ts",
-    "cypress/**",
     "coverage/**",
   ],
   overrides: [],

@@ -35,6 +35,7 @@
     "format": "npx prettier \"**/*\" --ignore-unknown --write",
     "lint": "eslint src/ --max-warnings 0 --report-unused-disable-directives",
     "lint:fix": "eslint src/ --max-warnings 0 --report-unused-disable-directives --fix",
+    "lint:fix:e2e": "eslint cypress/ --max-warnings 0 --report-unused-disable-directives --fix",
     "prepare": "husky install",
     "dev:arch": "npx depcruise src --include-only \"^src\" --output-type dot | dot -T svg > architecture.svg",
     "knip": "knip",
